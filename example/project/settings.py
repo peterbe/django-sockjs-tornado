@@ -119,7 +119,7 @@ INSTALLED_APPS = (
     # 'django.contrib.admin',
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
-    'django_tornado_sockets',
+    'django_sockjs_tornado',
     'project.chat',
 )
 
