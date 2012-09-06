@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Chat Demo</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+
+        <link rel="stylesheet" href="static/chat/css/normalize.css">
+        <link rel="stylesheet" href="static/chat/css/main.css">
+        <script src="static/chat/js/vendor/modernizr-2.6.1.min.js"></script>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
+        <![endif]-->
+
+        <!-- Add your site or application content here -->
+        <h1>Chat Demo</h1>
+        <form>
+        <input name="name" placeholder="Your username here"><br>
+        <div id="out">
+        </div>
+        <input name="message"> <input type="submit" value="Submit">
+
+        </form>
+        <script>
+        var SOCK = {
+          host: location.hostname,
+          port: {{ socket_port }},
+          channel: '{{ socket_channel }}'
+        };
+        </script>
+        <script src="static/chat/js/vendor/sockjs-0.3.2.min.js"></script>
+        <!--<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>-->
+        <script>window.jQuery || document.write('<script src="static/chat/js/vendor/jquery-1.8.0.min.js"><\/script>')</script>
+        <script src="static/chat/js/plugins.js"></script>
+        <script src="static/chat/js/main.js"></script>
+    </body>
+</html>
