@@ -1,3 +1,5 @@
 *.pyc
-example/database.db
-
+/example/database.db
+/build/
+/dist/
+/django_sockjs_tornado.egg-info/
